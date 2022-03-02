@@ -18,6 +18,7 @@ snippet inside your `.csproj` file:
 ```
 <ItemGroup>
   <_TrimmerCustomSteps Include="/full/path/to/the/extra-sharp-trimmer.dll" BeforeStep="OutputStep" Type="ExtraSteps.RemoveBuggyResourcesStep" />
+</ItemGroup>
 ```
 
 This will run the `RemoveBuggyResourcesStep` step before the `OutputStep`
