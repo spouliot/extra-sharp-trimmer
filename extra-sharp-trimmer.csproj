@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>custom_trim_step</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.ILLink" Version="6.0.200-1.22124.2" />
+    <PackageReference Include="Mono.Cecil" Version="0.11.4" />
+  </ItemGroup>
+
+</Project>
