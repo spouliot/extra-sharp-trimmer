@@ -1,12 +1,12 @@
-﻿using Mono.Cecil;
+using Mono.Cecil;
 using Mono.Linker;
 using Mono.Linker.Steps;
 
 namespace ExtraSteps {
 
 	public class RemoveBuggyResourcesStep : BaseStep {
-	
-        protected override void ProcessAssembly(AssemblyDefinition assembly)
+
+		protected override void ProcessAssembly (AssemblyDefinition assembly)
 		{
 			if (Annotations.GetAction (assembly) != AssemblyAction.Link)
 				return;
@@ -14,7 +14,7 @@ namespace ExtraSteps {
 			var module = assembly.MainModule;
 			if (!module.HasResources)
 				return;
-			
+
 			var resources = module.Resources;
 			for (int i = 0; i < resources.Count; i++) {
 				var resource = resources [i];
